@@ -26,7 +26,7 @@ function Chat() {
             db.collection('channels')
             .doc(channelId)
             .collection("messages")
-            .orderBy('timestamp', 'desc')
+            .orderBy('timestamp', 'asc')
             .onSnapshot((snapshot) => 
                 setMessages(snapshot.docs.map((doc) => doc.data()))
             );
@@ -67,7 +67,7 @@ function Chat() {
                 <form>
                     <input value={input} 
                     disabled={!channelId}
-                    onChange={e => setInput(e.target.value)} placeholder={'Message #TESTCHANNEL'} />
+                    onChange={e => setInput(e.target.value)} placeholder={'Message ' + channelName} />
                     <button 
                     disabled={!channelId}
                     className='chat__inputButton' 
