@@ -3,13 +3,13 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAQC4A3YQOuA5zz4m7COiOTf4PvHZSH3SY",
-    authDomain: "kakeguruidiscord.firebaseapp.com",
-    projectId: "kakeguruidiscord",
-    storageBucket: "kakeguruidiscord.appspot.com",
-    messagingSenderId: "482045069636",
-    appId: "1:482045069636:web:3af90e2314fad20d7faf11",
-    measurementId: "G-NE2P0MWF0B"
+    apiKey: process.env.REACT_APP_FIREBASE_apiKey,
+    authDomain: process.env.REACT_APP_FIREBASE_authDomain,
+    projectId: process.env.REACT_APP_FIREBASE_projectId,
+    storageBucket: process.env.REACT_APP_FIREBASE_storageBucket,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_messagingSenderId,
+    appId: process.env.REACT_APP_FIREBASE_appId,
+    measurementId: process.env.REACT_APP_FIREBASE_measurementId
   };
 
   const firebaseApp = firebase.initializeApp(firebaseConfig);
